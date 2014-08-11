@@ -3,11 +3,13 @@
 # Examples
 #
 #   include vagrant_manager
-class vagrant_manager {
+class vagrant_manager
+  ($version = '1.5.5')
+ {
   package { 'VagrantManager':
     ensure   => 'installed',
     provider => 'appdmg',
-    source   => 'https://github.com/lanayotech/vagrant-manager/releases/download/1.5.3/vagrant-manager-1.5.5.dmg',
+    source   => "https://github.com/lanayotech/vagrant-manager/releases/download/${version}/vagrant-manager-${version}.dmg",
   }
 }
 
